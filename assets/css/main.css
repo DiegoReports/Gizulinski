@@ -46,8 +46,9 @@
 
 .dark-background {
   --background-color: #8C3718;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  /* --default-color: #ffffff; */
+  /* --heading-color: #ffffff; */
+  --heading-color: #462f2182;
   --surface-color: #343333;
   --contrast-color: #ffffff;
 }
@@ -734,7 +735,7 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: #d98e73dc; /* Vermelho tema com transparência */
+  background: #f2e4d8d2; /* Vermelho tema com transparência */
   z-index: 1;
 }
 
@@ -846,6 +847,29 @@ section,
   color: var(--accent-color);
 }
 
+.hero-image {
+  animation: floatXY 10s ease-in-out infinite;
+}
+
+@keyframes floatXY {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(6px, -8px);
+  }
+  50% {
+    transform: translate(0, -14px);
+  }
+  75% {
+    transform: translate(-6px, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
 .hero .hero-image-wrapper {
   position: relative;
   padding: 0 40px;
@@ -855,7 +879,7 @@ section,
   border-radius: 10px;
 }
 
-.img-fluid {
+.img-fluid.hero-image{
   max-width: 75%;
 }
 
@@ -1476,6 +1500,36 @@ section,
 .services .service-card:hover .service-icon {
   color: var(--contrast-color);
   transform: scale(0.95);
+}
+
+.icon-idosos {
+  width: 64px;
+  height: 64px;
+  background-color: #333; /* cor inicial */
+  -webkit-mask: url('../img/services/idosos.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('../img/services/idosos.svg') no-repeat center;
+  mask-size: contain;
+  transition: background-color 0.3s ease;
+}
+
+.service-card:hover .icon-idosos {
+  background-color: var(--contrast-color); /* cor ao passar o mouse */
+}
+
+.icon-estetica {
+  width: 64px;
+  height: 64px;
+  background-color: #333; /* cor inicial */
+  -webkit-mask: url('../img/services/woman-hair.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('../img/services/woman-hair.svg') no-repeat center;
+  mask-size: contain;
+  transition: background-color 0.3s ease;
+}
+
+.service-card:hover .icon-estetica {
+  background-color: var(--contrast-color); /* cor ao passar o mouse */
 }
 
 .services .service-card:hover .service-info h3 a,
