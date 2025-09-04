@@ -735,7 +735,7 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: #f2e4d8d2; /* Vermelho tema com transparência */
+  background: #f2e4d8e5; /* Vermelho tema com transparência */
   z-index: 1;
 }
 
@@ -2334,7 +2334,8 @@ section,
 
 .call-to-action .cta-image img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
+  height: 34rem;
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
   transition: transform 0.3s ease;
 }
@@ -2367,7 +2368,8 @@ section,
   }
 
   .call-to-action .cta-image img {
-    max-width: 80%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
